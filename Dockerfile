@@ -49,6 +49,6 @@ RUN cp /usr/share/zoneinfo/Japan /etc/localtime
 COPY --from=builder /go/bin/${BIN} /usr/local/bin/${APP}
 
 # UID/GID 65532 is also known as nonroot user in distroless image
-USER 65532:65532
+#USER 65532:65532
 
 CMD /usr/local/bin/${APP} "scan"
