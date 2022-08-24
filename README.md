@@ -22,7 +22,7 @@ $ sudo hciconfig hci0 up
 
     $ docker build -t ghcr.io/cty3000/docker-switchbot:latest .
 
-    $ docker run -dit --rm -p 80:8080 --name switchbot ghcr.io/cty3000/docker-switchbot:latest
+    $ docker run -dit --rm --name switchbot -v /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket ghcr.io/cty3000/docker-switchbot:latest
 
     $ docker ps -a
 
